@@ -1,93 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="740" viewBox="0 0 1520 740" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="960" viewBox="0 0 1500 960" role="img" aria-labelledby="title desc">
   <title id="title">Public health statistics workflow</title>
-  <desc id="desc">Portfolio-style workflow from local workbook through cleaning, descriptive summary table, crude comparisons, age-adjusted models, forest plots, exploratory interaction analysis, Quarto report, and GitHub Pages deployment.</desc>
+  <desc id="desc">Portfolio-style workflow from a local workbook through cleaning, descriptive summary table, crude comparisons, age-adjusted models, forest plots, exploratory interaction analysis, Quarto report, and GitHub Pages deployment.</desc>
   <defs>
     <style>
       .bg { fill: #f8fafc; }
       .step { fill: #ffffff; stroke: #2563eb; stroke-width: 2.2; }
       .analysis { fill: #eff6ff; stroke: #2563eb; stroke-width: 2.2; }
-      .validation { fill: #ecfdf5; stroke: #059669; stroke-width: 2.2; }
       .report { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.2; }
+      .deploy { fill: #ecfdf5; stroke: #059669; stroke-width: 2.2; }
       .title { fill: #0f172a; font: 700 26px Arial, sans-serif; }
       .subtitle { fill: #475569; font: 16px Arial, sans-serif; }
       .label { fill: #0f172a; font: 700 18px Arial, sans-serif; }
       .small { fill: #475569; font: 14px Arial, sans-serif; }
-      .arrow { stroke: #64748b; stroke-width: 2.8; fill: none; marker-end: url(#arrowhead); }
+      .arrow { stroke: #64748b; stroke-width: 3.1; fill: none; marker-end: url(#arrowhead); stroke-linecap: round; stroke-linejoin: round; }
     </style>
     <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
       <path d="M0,0 L12,4 L0,8 Z" fill="#64748b" />
     </marker>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1520" height="740" />
+  <rect class="bg" x="0" y="0" width="1500" height="960" />
   <text class="title" x="52" y="52">Public Health Statistics Workflow</text>
   <text class="subtitle" x="52" y="80">Reproducible public-health analytics workflow with notebook analysis and Quarto reporting</text>
 
   <!-- Row 1 -->
-  <rect class="step" x="52" y="126" width="172" height="108" rx="14" />
-  <text class="label" x="84" y="164">Local</text>
-  <text class="label" x="79" y="186">workbook</text>
-  <text class="small" x="89" y="209">local input</text>
+  <rect class="step" x="60" y="126" width="260" height="96" rx="14" />
+  <text class="label" x="190" y="164" text-anchor="middle">Local Workbook</text>
+  <text class="small" x="190" y="188" text-anchor="middle">local input</text>
 
-  <path class="arrow" d="M224 180 H276" />
+  <path class="arrow" d="M320 174 H360" />
 
-  <rect class="step" x="276" y="126" width="176" height="108" rx="14" />
-  <text class="label" x="309" y="164">Data</text>
-  <text class="label" x="303" y="186">cleaning</text>
-  <text class="small" x="311" y="209">derived fields</text>
+  <rect class="step" x="360" y="126" width="260" height="96" rx="14" />
+  <text class="label" x="490" y="164" text-anchor="middle">Data Cleaning</text>
+  <text class="small" x="490" y="188" text-anchor="middle">derived fields</text>
 
-  <!-- Vertical drop -->
-  <path class="arrow" d="M364 234 V294" />
+  <!-- Row 2 -->
+  <path class="arrow" d="M490 222 V260 H1060 V312" />
 
-  <!-- Row 2, right-aligned -->
-  <rect class="analysis" x="700" y="294" width="206" height="108" rx="14" />
-  <text class="label" x="726" y="332">Descriptive</text>
-  <text class="label" x="757" y="354">summary table</text>
-  <text class="small" x="743" y="377">overall and by sex</text>
+  <rect class="analysis" x="930" y="312" width="260" height="96" rx="14" />
+  <text class="label" x="1060" y="348" text-anchor="middle">Descriptive Summary Table</text>
+  <text class="small" x="1060" y="372" text-anchor="middle">overall and by sex</text>
 
-  <path class="arrow" d="M700 348 H648" />
+  <path class="arrow" d="M930 360 H880" />
 
-  <rect class="analysis" x="442" y="294" width="206" height="108" rx="14" />
-  <text class="label" x="475" y="332">Crude</text>
-  <text class="label" x="464" y="354">comparisons</text>
-  <text class="small" x="471" y="377">Mann-Whitney, chi-square</text>
+  <rect class="analysis" x="620" y="312" width="260" height="96" rx="14" />
+  <text class="label" x="750" y="348" text-anchor="middle">Crude Group Comparisons</text>
+  <text class="small" x="750" y="372" text-anchor="middle">Mann-Whitney, chi-square</text>
 
   <!-- Row 3 -->
-  <path class="arrow" d="M545 402 V462" />
-  <rect class="analysis" x="52" y="462" width="214" height="108" rx="14" />
-  <text class="label" x="76" y="500">Age-adjusted</text>
-  <text class="label" x="97" y="522">models</text>
-  <text class="small" x="77" y="545">categorical age only</text>
+  <path class="arrow" d="M750 408 V452 H190 V504" />
 
-  <path class="arrow" d="M266 516 H318" />
-  <rect class="analysis" x="318" y="462" width="214" height="108" rx="14" />
-  <text class="label" x="345" y="500">Forest</text>
-  <text class="label" x="349" y="522">plots</text>
-  <text class="small" x="336" y="545">adjusted effects and odds</text>
+  <rect class="analysis" x="60" y="504" width="260" height="96" rx="14" />
+  <text class="label" x="190" y="540" text-anchor="middle">Age-Adjusted Models</text>
+  <text class="small" x="190" y="564" text-anchor="middle">categorical age only</text>
+
+  <path class="arrow" d="M320 552 H360" />
+
+  <rect class="analysis" x="360" y="504" width="260" height="96" rx="14" />
+  <text class="label" x="490" y="540" text-anchor="middle">Forest Plots</text>
+  <text class="small" x="490" y="564" text-anchor="middle">adjusted effects and odds</text>
 
   <!-- Row 4 -->
-  <path class="arrow" d="M532 516 H584" />
-  <rect class="analysis" x="584" y="462" width="214" height="108" rx="14" />
-  <text class="label" x="612" y="500">Exploratory</text>
-  <text class="label" x="608" y="522">interaction</text>
-  <text class="small" x="618" y="545">subgroup heterogeneity</text>
+  <path class="arrow" d="M620 552 H670 V696 H750" />
 
-  <path class="arrow" d="M798 516 H850" />
-  <rect class="report" x="850" y="462" width="214" height="108" rx="14" />
-  <text class="label" x="904" y="500">Quarto</text>
-  <text class="label" x="902" y="522">report</text>
-  <text class="small" x="893" y="545">presentation layer</text>
+  <rect class="analysis" x="620" y="696" width="260" height="96" rx="14" />
+  <text class="label" x="750" y="732" text-anchor="middle">Exploratory Interaction Analysis</text>
+  <text class="small" x="750" y="756" text-anchor="middle">subgroup heterogeneity check</text>
+
+  <path class="arrow" d="M880 744 H930" />
+
+  <rect class="report" x="930" y="696" width="260" height="96" rx="14" />
+  <text class="label" x="1060" y="732" text-anchor="middle">Quarto Report</text>
+  <text class="small" x="1060" y="756" text-anchor="middle">presentation layer</text>
 
   <!-- Row 5 -->
-  <path class="arrow" d="M956 570 V628" />
-  <rect class="validation" x="850" y="628" width="214" height="108" rx="14" />
-  <text class="label" x="884" y="666">GitHub</text>
-  <text class="label" x="889" y="688">Pages</text>
-  <text class="small" x="887" y="711">deployed site</text>
+  <path class="arrow" d="M1060 792 V828 H760 V840" />
 
-  <!-- contextual notes -->
-  <text class="subtitle" x="1190" y="162">workflow</text>
-  <text class="subtitle" x="1190" y="184">progression</text>
-  <text class="subtitle" x="1190" y="206">left-to-right,</text>
-  <text class="subtitle" x="1190" y="228">then down</text>
+  <rect class="deploy" x="630" y="840" width="260" height="96" rx="14" />
+  <text class="label" x="760" y="876" text-anchor="middle">GitHub Pages Deployment</text>
+  <text class="small" x="760" y="900" text-anchor="middle">published site</text>
 </svg>

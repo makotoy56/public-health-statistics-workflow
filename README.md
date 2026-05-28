@@ -2,7 +2,20 @@
 
 Reproducible epidemiology and public-health analytics workflow built around a Jupyter notebook for analysis and a Quarto report for presentation. The project emphasizes descriptive comparisons, age-adjusted sensitivity analysis, and exploratory subgroup checks while keeping raw data and generated outputs out of Git.
 
-[Live Report](https://makotoy56.github.io/public-health-statistics-workflow/)
+## Quick Links
+
+- [Live Quarto Report](https://makotoy56.github.io/public-health-statistics-workflow/)
+- [Main Analysis Notebook](notebooks/generate_public_health_summary_table.ipynb)
+- [Quarto Report Source](reports/public_health_summary_report.qmd)
+
+## Representative Figures
+
+These curated previews are intentionally tracked in `docs/figures/` for the README. The full-resolution analysis figures remain under ignored output paths.
+
+| Figure 5 | Figure 6 |
+| --- | --- |
+| <img src="docs/figures/fig5_preview.png" alt="Age-adjusted mean differences preview" width="420"> | <img src="docs/figures/fig6_preview.png" alt="Age-adjusted odds ratios preview" width="420"> |
+| Age-adjusted mean differences for continuous outcomes | Age-adjusted odds ratios for binary threshold outcomes |
 
 ## Key Features
 
@@ -13,26 +26,6 @@ Reproducible epidemiology and public-health analytics workflow built around a Ju
 - Exploratory sex-by-age interaction analysis
 - Quarto HTML reporting layer
 - Git-friendly separation of analysis code, report source, and generated artifacts
-
-## Workflow Overview
-
-```mermaid
-flowchart LR
-  A[Local workbook in data/] --> B[Cleaning and derived variables]
-  B --> C[Descriptive analysis]
-  C --> D[Age-adjusted models]
-  D --> E[Exploratory interaction analysis]
-  E --> F[Quarto HTML report]
-```
-
-## Representative Figures
-
-These curated previews are intentionally tracked in `docs/figures/` for the README. The full-resolution analysis figures remain under ignored output paths.
-
-| Figure 5 | Figure 6 |
-| --- | --- |
-| <img src="docs/figures/fig5_preview.png" alt="Age-adjusted mean differences preview" width="420"> | <img src="docs/figures/fig6_preview.png" alt="Age-adjusted odds ratios preview" width="420"> |
-| Age-adjusted mean differences for continuous outcomes | Age-adjusted odds ratios for binary cutoff outcomes |
 
 ## Statistical Methods
 
@@ -53,10 +46,21 @@ All inferential work is framed as descriptive or sensitivity analysis rather tha
 - Generated outputs live under `outputs/` and are ignored by Git.
 - Curated README preview images are stored separately under `docs/figures/`.
 
+## Workflow Overview
+
+```mermaid
+flowchart LR
+  A[Local workbook in data/] --> B[Cleaning and derived variables]
+  B --> C[Descriptive analysis]
+  C --> D[Age-adjusted models]
+  D --> E[Exploratory interaction analysis]
+  E --> F[Quarto HTML report]
+```
+
 ## Repository Structure
 
 ```text
-public-health-statistics-workflow/
+.
 ├── data/                     # local workbook, ignored
 ├── docs/
 │   └── figures/
@@ -94,10 +98,17 @@ quarto render reports/public_health_summary_report.qmd --output-dir outputs/repo
 
 ## Reports
 
-- [Quarto report source](reports/public_health_summary_report.qmd)
-- [Main analysis notebook](notebooks/generate_public_health_summary_table.ipynb)
+- The Quarto report is the polished presentation layer.
+- The notebook remains the main analysis workspace.
+- Generated HTML is deployed through GitHub Pages using GitHub Actions.
 
 GitHub Pages must be enabled from repository Settings > Pages > Build and deployment > GitHub Actions.
+
+## Generated Outputs
+
+Running the notebook creates a styled Excel summary table, analysis figures, and optional HTML report files under `outputs/`. These files are intentionally ignored by Git because they are reproducible generated artifacts.
+
+The README uses curated preview images stored under `docs/figures/` for portfolio display.
 
 ## Notes on Data
 

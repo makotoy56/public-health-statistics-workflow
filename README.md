@@ -21,6 +21,15 @@ This project demonstrates a reproducible workflow for descriptive public-health 
 - Quarto reporting and GitHub Pages deployment
 - Git and GitHub reproducibility practices
 
+## Dataset Snapshot
+
+- 845 participants total
+- 437 Male and 408 Female participants
+- four broad age groups
+- continuous cardiometabolic, dietary, and urinary sodium measures
+- binary public-health cutoff indicators
+- local workbook excluded from Git
+
 ## Workflow
 
 <img src="docs/figures/workflow_diagram.svg" alt="Workflow overview" width="900">

@@ -48,7 +48,7 @@
   <text class="small" x="625" y="209" text-anchor="middle">derived fields</text>
 
   <!-- row 2 -->
-  <path class="arrow" d="M625 225 V320" />
+  <path class="arrow" d="M625 225 V290 H315 V320" />
 
   <rect class="analysis" x="190" y="320" width="250" height="70" rx="14" />
   <text class="label" x="315" y="351" text-anchor="middle">Descriptive Summary Table</text>
@@ -61,7 +61,7 @@
   <text class="small" x="625" y="374" text-anchor="middle">Mann-Whitney and chi-square</text>
 
   <!-- row 3 -->
-  <path class="arrow" d="M625 390 V485" />
+  <path class="arrow" d="M625 390 V455 H315 V485" />
 
   <rect class="analysis" x="190" y="485" width="250" height="70" rx="14" />
   <text class="label" x="315" y="516" text-anchor="middle">Age-Adjusted Models</text>
@@ -81,7 +81,7 @@
   <text class="small" x="935" y="539" text-anchor="middle">subgroup heterogeneity check</text>
 
   <!-- row 5 -->
-  <path class="arrow" d="M935 555 V650" />
+  <path class="arrow" d="M625 555 V615 H935 V650" />
 
   <rect class="report" x="810" y="650" width="250" height="70" rx="14" />
   <text class="label" x="935" y="681" text-anchor="middle">Quarto Report</text>

@@ -14,7 +14,7 @@
       .groupLabel { fill: #334155; font: 700 15px Arial, sans-serif; letter-spacing: 0.02em; }
       .label { fill: #0f172a; font: 700 18px Arial, sans-serif; }
       .small { fill: #475569; font: 14px Arial, sans-serif; }
-      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrowhead); stroke-linecap: round; stroke-linejoin: round; }
+      .arrow { stroke: #64748b; stroke-width: 3.6; fill: none; marker-end: url(#arrowhead); stroke-linecap: round; stroke-linejoin: round; }
     </style>
     <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
       <path d="M0,0 L12,4 L0,8 Z" fill="#64748b" />
@@ -48,7 +48,7 @@
   <text class="small" x="625" y="209" text-anchor="middle">derived fields</text>
 
   <!-- row 2 -->
-  <path class="arrow" d="M625 225 V295" />
+  <path class="arrow" d="M625 225 V320" />
 
   <rect class="analysis" x="190" y="320" width="250" height="70" rx="14" />
   <text class="label" x="315" y="351" text-anchor="middle">Descriptive Summary Table</text>
@@ -61,7 +61,7 @@
   <text class="small" x="625" y="374" text-anchor="middle">Mann-Whitney and chi-square</text>
 
   <!-- row 3 -->
-  <path class="arrow" d="M625 390 V460" />
+  <path class="arrow" d="M625 390 V485" />
 
   <rect class="analysis" x="190" y="485" width="250" height="70" rx="14" />
   <text class="label" x="315" y="516" text-anchor="middle">Age-Adjusted Models</text>
@@ -81,15 +81,15 @@
   <text class="small" x="935" y="539" text-anchor="middle">subgroup heterogeneity check</text>
 
   <!-- row 5 -->
-  <path class="arrow" d="M935 555 V620" />
+  <path class="arrow" d="M935 555 V650" />
 
-  <rect class="report" x="690" y="650" width="250" height="70" rx="14" />
-  <text class="label" x="815" y="681" text-anchor="middle">Quarto Report</text>
-  <text class="small" x="815" y="704" text-anchor="middle">presentation layer</text>
+  <rect class="report" x="810" y="650" width="250" height="70" rx="14" />
+  <text class="label" x="935" y="681" text-anchor="middle">Quarto Report</text>
+  <text class="small" x="935" y="704" text-anchor="middle">presentation layer</text>
 
-  <path class="arrow" d="M940 685 H1000" />
+  <path class="arrow" d="M1060 685 H1120" />
 
-  <rect class="deploy" x="1000" y="650" width="250" height="70" rx="14" />
-  <text class="label" x="1125" y="681" text-anchor="middle">GitHub Pages Deployment</text>
-  <text class="small" x="1125" y="704" text-anchor="middle">published site</text>
+  <rect class="deploy" x="1120" y="650" width="250" height="70" rx="14" />
+  <text class="label" x="1245" y="681" text-anchor="middle">GitHub Pages Deployment</text>
+  <text class="small" x="1245" y="704" text-anchor="middle">published site</text>
 </svg>

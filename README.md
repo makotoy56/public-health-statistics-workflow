@@ -49,7 +49,7 @@ Raw data files are excluded from Git. Place the local raw workbook under `data/`
 - Preliminary Quarto report template for future reporting work
 - Separate age-adjusted sensitivity analysis using regression models
 - Age-adjusted forest plots for regression-based sensitivity analyses
-- Exploratory sex-by-age interaction analyses with one primary subgroup visualization and a supplementary binary cutoff figure
+- Exploratory sex-by-age interaction analyses with one primary subgroup visualization
 
 ## Folder Structure
 
@@ -90,7 +90,7 @@ Descriptive statistics include means, standard deviations, medians, interquartil
 
 Additional regression analyses adjust for age group as a sensitivity analysis. These analyses are reported separately from the crude summary table so the original descriptive workflow remains unchanged. Forest plots summarize the age-adjusted mean differences and odds ratios to make the adjusted sex effects easier to review.
 
-Exploratory sex-by-age interaction models evaluate whether sex differences vary across age groups. These models include sex-by-age-group interaction terms and are summarized with one primary subgroup visualization plus a supplementary binary cutoff figure. Interaction results are interpreted separately from main sex effects and are not intended for causal inference.
+Exploratory sex-by-age interaction models evaluate whether sex differences vary across age groups. These models include sex-by-age-group interaction terms and are summarized with one primary subgroup visualization. Interaction results are interpreted separately from main sex effects and are not intended for causal inference.
 
 ### Age-Adjusted Sensitivity Analysis
 
@@ -171,10 +171,7 @@ outputs/figures/fig4_cutoff_prevalence_by_sex.png
 outputs/figures/fig5_age_adjusted_mean_differences.png
 outputs/figures/fig6_age_adjusted_odds_ratios.png
 outputs/figures/fig7_interaction_continuous_outcomes.png
-outputs/figures/fig8_interaction_cutoff_prevalence.png
 ```
-
-The binary cutoff interaction figure is kept as a supplementary view of subgroup heterogeneity.
 
 Optional HTML export writes to:
 

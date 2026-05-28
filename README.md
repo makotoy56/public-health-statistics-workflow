@@ -46,7 +46,7 @@ Raw data files are excluded from Git. Place the local raw workbook under `data/`
 - Matplotlib-only exploratory visualizations
 - Styled Excel export for reporting
 - Preliminary `src/` modules prepared for future notebook refactoring
-- Preliminary Quarto report template for future reporting work
+- Polished Quarto HTML report for stakeholder-facing presentation
 - Separate age-adjusted sensitivity analysis using regression models
 - Age-adjusted forest plots for regression-based sensitivity analyses
 - Exploratory sex-by-age interaction analyses with one primary subgroup visualization
@@ -158,6 +158,12 @@ Export the notebook to HTML:
 .venv/bin/jupyter nbconvert --to html notebooks/generate_public_health_summary_table.ipynb --output-dir outputs/reports
 ```
 
+Render the Quarto report to HTML:
+
+```bash
+quarto render reports/public_health_summary_report.qmd --output-dir outputs/reports
+```
+
 ## Outputs Generated
 
 Running the notebook generates:
@@ -171,6 +177,7 @@ outputs/figures/fig4_cutoff_prevalence_by_sex.png
 outputs/figures/fig5_age_adjusted_mean_differences.png
 outputs/figures/fig6_age_adjusted_odds_ratios.png
 outputs/figures/fig7_interaction_continuous_outcomes.png
+outputs/reports/public_health_summary_report.html
 ```
 
 Optional HTML export writes to:

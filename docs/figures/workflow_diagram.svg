@@ -1,81 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="390" viewBox="0 0 1920 390" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="520" viewBox="0 0 1960 520" role="img" aria-labelledby="title desc">
   <title id="title">Workflow overview</title>
-  <desc id="desc">A two-row workflow diagram from raw workbook through cleaning, descriptive analysis, age-adjusted models, interaction check, Quarto report, and GitHub Pages.</desc>
+  <desc id="desc">A zig-zag workflow diagram from raw workbook through data cleaning, descriptive analysis, crude visualizations, age-adjusted models, interaction check, forest plots, Quarto report, and GitHub Pages.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#6B7280"/>
     </marker>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#1f2937" flood-opacity="0.08"/>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#111827" flood-opacity="0.08"/>
     </filter>
   </defs>
 
-  <rect width="1920" height="390" fill="#ffffff"/>
-  <text x="960" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">Workflow overview</text>
-  <text x="960" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6B7280">From raw workbook to GitHub Pages</text>
+  <rect width="1960" height="520" fill="#ffffff"/>
+  <text x="980" y="36" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#111827">Workflow overview</text>
+  <text x="980" y="60" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6B7280">From raw workbook to GitHub Pages</text>
 
-  <!-- connectors -->
-  <g stroke="#6B7280" stroke-width="3" fill="none" marker-end="url(#arrow)">
-    <line x1="240" y1="122" x2="270" y2="122"/>
-    <line x1="470" y1="122" x2="500" y2="122"/>
-    <line x1="700" y1="122" x2="730" y2="122"/>
-    <line x1="930" y1="122" x2="960" y2="122"/>
-    <line x1="1060" y1="196" x2="1060" y2="240"/>
-    <line x1="1160" y1="282" x2="1190" y2="282"/>
-    <line x1="1390" y1="282" x2="1420" y2="282"/>
-    <line x1="1620" y1="282" x2="1650" y2="282"/>
+  <g stroke="#6B7280" stroke-width="3.2" fill="none" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- top row -->
+    <line x1="300" y1="144" x2="336" y2="144"/>
+    <line x1="575" y1="144" x2="611" y2="144"/>
+    <line x1="850" y1="144" x2="886" y2="144"/>
+    <line x1="1125" y1="144" x2="1161" y2="144"/>
+    <!-- down into second row -->
+    <line x1="1280" y1="178" x2="1280" y2="236"/>
+    <!-- bottom row leftward -->
+    <line x1="1160" y1="292" x2="1124" y2="292"/>
+    <line x1="885" y1="292" x2="849" y2="292"/>
+    <line x1="610" y1="292" x2="574" y2="292"/>
+    <line x1="335" y1="292" x2="299" y2="292"/>
   </g>
 
-  <!-- top row nodes -->
   <g font-family="Inter, Arial, sans-serif" text-anchor="middle" filter="url(#shadow)">
-    <g transform="translate(40 82)">
-      <rect width="200" height="80" rx="18" fill="#DCEBFA" stroke="#9BB7D4"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Raw Workbook</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Source data loaded</text>
+    <!-- top row -->
+    <g transform="translate(40 96)">
+      <rect width="260" height="96" rx="20" fill="#DCEBFA" stroke="#8FAECC" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Raw Workbook</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Local source data</text>
     </g>
-    <g transform="translate(270 82)">
-      <rect width="200" height="80" rx="18" fill="#E4F2F0" stroke="#9BC8C0"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Data Cleaning</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Derived variables</text>
+    <g transform="translate(315 96)">
+      <rect width="260" height="96" rx="20" fill="#E4F2F0" stroke="#88B8B0" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Data Cleaning</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Derived variables</text>
     </g>
-    <g transform="translate(500 82)">
-      <rect width="200" height="80" rx="18" fill="#F2E8D5" stroke="#D2B88D"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Descriptive</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Statistics</text>
+    <g transform="translate(590 96)">
+      <rect width="260" height="96" rx="20" fill="#F2E8D5" stroke="#C8AA76" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Descriptive</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Statistics</text>
     </g>
-    <g transform="translate(730 82)">
-      <rect width="200" height="80" rx="18" fill="#F0E0EA" stroke="#D3A3BC"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Crude</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Visualizations</text>
+    <g transform="translate(865 96)">
+      <rect width="260" height="96" rx="20" fill="#F0E0EA" stroke="#C78EA9" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Crude</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Visualizations</text>
     </g>
-    <g transform="translate(960 82)">
-      <rect width="200" height="80" rx="18" fill="#E6E3FA" stroke="#B0A8E2"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Age-Adjusted</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Models</text>
+    <g transform="translate(1140 96)">
+      <rect width="260" height="96" rx="20" fill="#E6E3FA" stroke="#A69ADA" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Age-Adjusted</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Models</text>
     </g>
-  </g>
 
-  <!-- bottom row nodes -->
-  <g font-family="Inter, Arial, sans-serif" text-anchor="middle" filter="url(#shadow)">
-    <g transform="translate(960 240)">
-      <rect width="200" height="80" rx="18" fill="#DCEBFA" stroke="#9BB7D4"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Forest</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Plots</text>
+    <!-- bottom row -->
+    <g transform="translate(1140 236)">
+      <rect width="260" height="96" rx="20" fill="#E8F0DB" stroke="#ABC07F" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Interaction</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Check</text>
     </g>
-    <g transform="translate(1190 240)">
-      <rect width="200" height="80" rx="18" fill="#E8F0DB" stroke="#B3C68D"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Interaction</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Check</text>
+    <g transform="translate(865 236)">
+      <rect width="260" height="96" rx="20" fill="#DCEBFA" stroke="#8FAECC" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Forest</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Plots</text>
     </g>
-    <g transform="translate(1420 240)">
-      <rect width="200" height="80" rx="18" fill="#F4E6D5" stroke="#D8B98D"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">Quarto</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Report</text>
+    <g transform="translate(590 236)">
+      <rect width="260" height="96" rx="20" fill="#F4E6D5" stroke="#D2AA74" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">Quarto</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Report</text>
     </g>
-    <g transform="translate(1650 240)">
-      <rect width="200" height="80" rx="18" fill="#E6F0F4" stroke="#A7C0CC"/>
-      <text x="100" y="31" font-size="18" font-weight="700" fill="#0F172A">GitHub</text>
-      <text x="100" y="52" font-size="14" fill="#334155">Pages</text>
+    <g transform="translate(315 236)">
+      <rect width="260" height="96" rx="20" fill="#E6F0F4" stroke="#9AB9C9" stroke-width="1.4"/>
+      <text x="130" y="38" font-size="20" font-weight="700" fill="#0F172A">GitHub</text>
+      <text x="130" y="60" font-size="14.5" fill="#334155">Pages</text>
     </g>
   </g>
 </svg>

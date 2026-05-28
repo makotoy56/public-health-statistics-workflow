@@ -6,3 +6,4 @@ openpyxl
 jupyter
 ipykernel
 nbconvert
+statsmodels

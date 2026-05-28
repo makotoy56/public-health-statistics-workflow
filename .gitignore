@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Raw data
+data/
+
+# Generated outputs and reports
+outputs/
+*.html

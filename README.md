@@ -2,6 +2,8 @@
 
 Reproducible epidemiology and public-health analytics workflow built around a Jupyter notebook for analysis and a Quarto report for presentation. The project emphasizes descriptive comparisons, age-adjusted sensitivity analysis, and exploratory subgroup checks while keeping raw data and generated outputs out of Git.
 
+[Live Report](https://makotoy56.github.io/public-health-statistics-workflow/)
+
 ## Key Features
 
 - Reproducible public-health analytics workflow
@@ -94,6 +96,8 @@ quarto render reports/public_health_summary_report.qmd --output-dir outputs/repo
 
 - [Quarto report source](reports/public_health_summary_report.qmd)
 - [Main analysis notebook](notebooks/generate_public_health_summary_table.ipynb)
+
+GitHub Pages must be enabled from repository Settings > Pages > Build and deployment > GitHub Actions.
 
 ## Notes on Data
 

@@ -1,31 +1,62 @@
 # Public Health Statistics Workflow
+*A reproducible public-health analytics workflow project*
 
-Reproducible epidemiology and public-health analytics workflow built around a Jupyter notebook for analysis and a Quarto report for presentation. The project emphasizes descriptive comparisons, age-adjusted sensitivity analysis, and exploratory subgroup checks while keeping raw data and generated outputs out of Git.
+This project turns a compact public-health dataset into a reproducible descriptive epidemiology workflow. It demonstrates how to move from cleaned tabular data to sex-stratified summaries, age-adjusted regression models, exploratory interaction checks, and a Quarto reporting layer, while keeping raw data and generated outputs out of Git.
 
-## Quick Links
+## What This Demonstrates
 
-- [Live Quarto Report](https://makotoy56.github.io/public-health-statistics-workflow/)
-- [Main Analysis Notebook](notebooks/generate_public_health_summary_table.ipynb)
-- [Quarto Report Source](reports/public_health_summary_report.qmd)
+- Reproducible descriptive epidemiology workflow
+- Public-health threshold analysis
+- Age-adjusted regression modeling
+- Forest plot visualization
+- Exploratory subgroup interaction analysis
+- Quarto reporting workflow
+- Git and GitHub reproducibility practices
 
-## Representative Figures
+## Workflow
+
+```mermaid
+flowchart LR
+  A[Raw Data] --> B[Cleaning]
+  B --> C[Descriptive Analysis]
+  C --> D[Age-Adjusted Models]
+  D --> E[Interaction Analysis]
+  E --> F[Quarto Reporting]
+  F --> G[GitHub Pages]
+```
+
+## Why This Project Matters
+
+Public-health datasets are often first explored in spreadsheets, but the analysis becomes much more defensible when the workflow is scripted, versioned, and easy to rerun. This project shows that transition in a modest but practical form: descriptive comparisons are documented clearly, age adjustment is handled transparently, and the final report is presented through a reproducible Quarto layer.
+
+The emphasis is interpretability. The results are framed as observational summaries, not causal claims, and the visuals are designed to make uncertainty and attenuation easy to see.
+
+## Key Findings
+
+- Crude sex differences are visible across several cardiometabolic and dietary indicators.
+- Some differences attenuate after adjustment for categorical age group.
+- Confidence intervals matter as much as point estimates in the forest plots.
+- The interaction analysis is exploratory and highlights possible subgroup heterogeneity.
+
+## Representative Results
 
 These curated previews are intentionally tracked in `docs/figures/` for the README. The full-resolution analysis figures remain under ignored output paths.
 
-| Figure 5 | Figure 6 |
-| --- | --- |
-| <img src="docs/figures/fig5_preview.png" alt="Age-adjusted mean differences preview" width="420"> | <img src="docs/figures/fig6_preview.png" alt="Age-adjusted odds ratios preview" width="420"> |
-| Age-adjusted mean differences for continuous outcomes | Age-adjusted odds ratios for binary threshold outcomes |
+### Figure 5. Age-Adjusted Mean Differences
 
-## Key Features
+<img src="docs/figures/fig5_preview.png" alt="Age-adjusted mean differences preview" width="900">
 
-- Reproducible public-health analytics workflow
-- Descriptive epidemiology summary table and crude sex comparisons
-- Age-adjusted sensitivity analysis using linear and logistic regression
-- Forest plot visualization for adjusted continuous and binary outcomes
-- Exploratory sex-by-age interaction analysis
-- Quarto HTML reporting layer
-- Git-friendly separation of analysis code, report source, and generated artifacts
+*Age-adjusted mean differences for continuous outcomes.*
+
+The forest plot summarizes how the Female vs Male contrasts behave after adjusting for categorical age group only. Estimates closer to zero suggest attenuation of the crude difference; wider intervals signal greater uncertainty.
+
+### Figure 6. Age-Adjusted Odds Ratios
+
+<img src="docs/figures/fig6_preview.png" alt="Age-adjusted odds ratios preview" width="900">
+
+*Age-adjusted odds ratios for binary threshold outcomes.*
+
+This figure translates the same sex comparison into public-health cutoff outcomes. It complements the continuous-outcome forest plot by showing whether threshold-based differences persist after age adjustment.
 
 ## Statistical Methods
 
@@ -42,20 +73,17 @@ All inferential work is framed as descriptive or sensitivity analysis rather tha
 
 - The Jupyter notebook is the main analysis workspace.
 - Reusable helper functions live under `src/` for future refactoring.
-- `reports/public_health_summary_report.qmd` is the stakeholder-facing Quarto layer.
-- Generated outputs live under `outputs/` and are ignored by Git.
+- `reports/public_health_summary_report.qmd` is the presentation layer.
+- Generated outputs live under `outputs/` and are intentionally ignored by Git.
 - Curated README preview images are stored separately under `docs/figures/`.
 
-## Workflow Overview
+## Explore The Project
 
-```mermaid
-flowchart LR
-  A[Local workbook in data/] --> B[Cleaning and derived variables]
-  B --> C[Descriptive analysis]
-  C --> D[Age-adjusted models]
-  D --> E[Exploratory interaction analysis]
-  E --> F[Quarto HTML report]
-```
+- [Main Analysis Notebook](notebooks/generate_public_health_summary_table.ipynb)
+- [Quarto Report Source](reports/public_health_summary_report.qmd)
+- [Live Quarto Report](https://makotoy56.github.io/public-health-statistics-workflow/)
+
+GitHub Pages must be enabled from repository Settings > Pages > Build and deployment > GitHub Actions.
 
 ## Repository Structure
 
@@ -73,42 +101,6 @@ flowchart LR
 ├── README.md
 └── requirements.txt
 ```
-
-## Running the Project
-
-Set up the environment:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-Run the notebook workspace:
-
-```bash
-.venv/bin/jupyter notebook notebooks/generate_public_health_summary_table.ipynb
-```
-
-Render the Quarto report:
-
-```bash
-quarto render reports/public_health_summary_report.qmd --output-dir outputs/reports
-```
-
-## Reports
-
-- The Quarto report is the polished presentation layer.
-- The notebook remains the main analysis workspace.
-- Generated HTML is deployed through GitHub Pages using GitHub Actions.
-
-GitHub Pages must be enabled from repository Settings > Pages > Build and deployment > GitHub Actions.
-
-## Generated Outputs
-
-Running the notebook creates a styled Excel summary table, analysis figures, and optional HTML report files under `outputs/`. These files are intentionally ignored by Git because they are reproducible generated artifacts.
-
-The README uses curated preview images stored under `docs/figures/` for portfolio display.
 
 ## Notes on Data
 

@@ -1,216 +1,100 @@
 # Public Health Statistics Workflow
 
-## Table of Contents
-
-- [Repository Purpose](#repository-purpose)
-- [Project Overview](#project-overview)
-- [Key Features](#key-features)
-- [Folder Structure](#folder-structure)
-- [Technologies Used](#technologies-used)
-- [Statistical Methods](#statistical-methods)
-- [Reproducibility](#reproducibility)
-- [Set Up a Virtual Environment](#set-up-a-virtual-environment)
-- [Install Requirements](#install-requirements)
-- [Run the Notebook](#run-the-notebook)
-- [HTML Export](#html-export)
-- [Outputs Generated](#outputs-generated)
-- [Current Limitations](#current-limitations)
-- [Future Directions](#future-directions)
-- [Project Status](#project-status)
-- [Notes on Data](#notes-on-data)
-
-## Repository Purpose
-
-This repository demonstrates a reproducible public health statistics workflow using notebook-based reporting. It highlights statistical testing, exploratory visualization, and a styled Excel export workflow suitable for portfolio review and educational use.
-
-## Project Overview
-
-This project generates a public health summary statistics table and exploratory figures from a local raw dataset. The Jupyter notebook is the main report and produces a styled Excel workbook plus publication-style PNG figures.
-
-The analysis includes:
-- workbook loading and sheet inspection
-- column mapping from the raw workbook to analysis names
-- data cleaning and derived cutoff indicators
-- overall and sex-stratified summary statistics
-- statistical tests comparing Male and Female groups
-- exploratory visualizations saved as PNG files
-
-Raw data files are excluded from Git. Place the local raw workbook under `data/` before running the notebook.
+Reproducible epidemiology and public-health analytics workflow built around a Jupyter notebook for analysis and a Quarto report for presentation. The project emphasizes descriptive comparisons, age-adjusted sensitivity analysis, and exploratory subgroup checks while keeping raw data and generated outputs out of Git.
 
 ## Key Features
 
-- Reproducible notebook workflow with project-relative paths
-- Overall and sex-stratified public health summary statistics
-- Mann-Whitney U tests for continuous variables
-- Chi-square tests for categorical and binary cutoff indicators
-- Matplotlib-only exploratory visualizations
-- Styled Excel export for reporting
-- Preliminary `src/` modules prepared for future notebook refactoring
-- Polished Quarto HTML report for stakeholder-facing presentation
-- Separate age-adjusted sensitivity analysis using regression models
-- Age-adjusted forest plots for regression-based sensitivity analyses
-- Exploratory sex-by-age interaction analyses with one primary subgroup visualization
+- Reproducible public-health analytics workflow
+- Descriptive epidemiology summary table and crude sex comparisons
+- Age-adjusted sensitivity analysis using linear and logistic regression
+- Forest plot visualization for adjusted continuous and binary outcomes
+- Exploratory sex-by-age interaction analysis
+- Quarto HTML reporting layer
+- Git-friendly separation of analysis code, report source, and generated artifacts
 
-## Folder Structure
+## Workflow Overview
+
+```mermaid
+flowchart LR
+  A[Local workbook in data/] --> B[Cleaning and derived variables]
+  B --> C[Descriptive analysis]
+  C --> D[Age-adjusted models]
+  D --> E[Exploratory interaction analysis]
+  E --> F[Quarto HTML report]
+```
+
+## Representative Figures
+
+These curated previews are intentionally tracked in `docs/figures/` for the README. The full-resolution analysis figures remain under ignored output paths.
+
+| Figure 5 | Figure 6 |
+| --- | --- |
+| <img src="docs/figures/fig5_preview.png" alt="Age-adjusted mean differences preview" width="420"> | <img src="docs/figures/fig6_preview.png" alt="Age-adjusted odds ratios preview" width="420"> |
+| Age-adjusted mean differences for continuous outcomes | Age-adjusted odds ratios for binary cutoff outcomes |
+
+## Statistical Methods
+
+- Descriptive statistics: means, standard deviations, medians, interquartile ranges, and percentages
+- Mann-Whitney U tests for crude continuous comparisons
+- Chi-square tests for crude categorical and binary comparisons
+- Age-adjusted linear regression for continuous outcomes
+- Age-adjusted logistic regression for binary cutoff outcomes
+- Exploratory sex-by-age interaction models to assess possible subgroup heterogeneity
+
+All inferential work is framed as descriptive or sensitivity analysis rather than causal inference.
+
+## Reproducibility
+
+- The Jupyter notebook is the main analysis workspace.
+- Reusable helper functions live under `src/` for future refactoring.
+- `reports/public_health_summary_report.qmd` is the stakeholder-facing Quarto layer.
+- Generated outputs live under `outputs/` and are ignored by Git.
+- Curated README preview images are stored separately under `docs/figures/`.
+
+## Repository Structure
 
 ```text
 public-health-statistics-workflow/
-├── data/                         # Raw data files, excluded from Git
+├── data/                     # local workbook, ignored
+├── docs/
+│   └── figures/
 ├── notebooks/
 │   └── generate_public_health_summary_table.ipynb
-├── outputs/                      # Generated files, excluded from Git
-│   ├── figures/
-│   ├── reports/
-│   └── public_health_summary_table.xlsx
+├── outputs/                  # generated files, ignored
 ├── reports/
 │   └── public_health_summary_report.qmd
-├── src/                          # Reusable helper modules for future refactoring
-│   ├── excel_export.py
-│   ├── plotting.py
-│   └── summary_stats.py
+├── src/
 ├── README.md
 └── requirements.txt
 ```
 
-## Technologies Used
+## Running the Project
 
-- Python
-- pandas
-- scipy
-- matplotlib
-- openpyxl
-- Jupyter Notebook
-- Quarto
-
-## Statistical Methods
-
-The main summary table and exploratory figures present crude, unadjusted comparisons between Male and Female groups. These descriptive results are intended to summarize the dataset and identify patterns for review, not to estimate causal effects.
-
-Descriptive statistics include means, standard deviations, medians, interquartile ranges, and percentages. Continuous variables are compared between groups using Mann-Whitney U tests because normality is not assumed. Categorical and binary cutoff indicators are compared using chi-square tests. Exploratory visualizations use simple matplotlib figures to show distributions, age-group percentages, and cutoff prevalence with approximate confidence intervals for proportions.
-
-Additional regression analyses adjust for age group as a sensitivity analysis. These analyses are reported separately from the crude summary table so the original descriptive workflow remains unchanged. Forest plots summarize the age-adjusted mean differences and odds ratios to make the adjusted sex effects easier to review.
-
-Exploratory sex-by-age interaction models evaluate whether sex differences vary across age groups. These models include sex-by-age-group interaction terms and are summarized with one primary subgroup visualization. Interaction results are interpreted separately from main sex effects and are not intended for causal inference.
-
-### Age-Adjusted Sensitivity Analysis
-
-Continuous outcomes are analyzed using linear regression models with sex and categorical age group as predictors. Binary cutoff outcomes are analyzed using logistic regression models with the same adjustment structure. The age-adjusted results report the Female vs Male coefficient for continuous outcomes and the Female vs Male odds ratio for binary outcomes, with 95% confidence intervals, p-values, and model sample sizes.
-
-These models adjust only for categorical age group. They should be interpreted as sensitivity analyses within an observational descriptive workflow, not as causal models.
-
-## Reproducibility
-
-The workflow is designed to be rerun from a clean clone after creating a virtual environment, installing `requirements.txt`, and placing the local raw workbook under `data/`. Analysis parameters, output paths, figure paths, group definitions, and export settings are defined near the top of the notebook.
-
-Generated outputs are intentionally excluded from Git. Recreate them by running the notebook.
-
-## Set Up a Virtual Environment
-
-Create the virtual environment:
+Set up the environment:
 
 ```bash
 python3 -m venv .venv
-```
-
-Activate it:
-
-```bash
 source .venv/bin/activate
-```
-
-## Install Requirements
-
-```bash
 pip install -r requirements.txt
 ```
 
-Register the virtual environment as a Jupyter kernel:
+Run the notebook workspace:
 
 ```bash
-.venv/bin/python -m ipykernel install --user --name public-health-statistics --display-name "public-health-statistics"
+.venv/bin/jupyter notebook notebooks/generate_public_health_summary_table.ipynb
 ```
 
-## Run the Notebook
-
-Launch Jupyter:
-
-```bash
-.venv/bin/jupyter notebook
-```
-
-Open and run:
-
-```text
-notebooks/generate_public_health_summary_table.ipynb
-```
-
-The notebook expects the raw workbook at:
-
-```text
-data/public_health_statistics_dataset.xlsx
-```
-
-## HTML Export
-
-Export the notebook to HTML:
-
-```bash
-.venv/bin/jupyter nbconvert --to html notebooks/generate_public_health_summary_table.ipynb --output-dir outputs/reports
-```
-
-Render the Quarto report to HTML:
+Render the Quarto report:
 
 ```bash
 quarto render reports/public_health_summary_report.qmd --output-dir outputs/reports
 ```
 
-## Outputs Generated
+## Reports
 
-Running the notebook generates:
-
-```text
-outputs/public_health_summary_table.xlsx
-outputs/figures/fig1_bmi_by_sex.png
-outputs/figures/fig2_blood_glucose_by_sex.png
-outputs/figures/fig3_age_group_percentages.png
-outputs/figures/fig4_cutoff_prevalence_by_sex.png
-outputs/figures/fig5_age_adjusted_mean_differences.png
-outputs/figures/fig6_age_adjusted_odds_ratios.png
-outputs/figures/fig7_interaction_continuous_outcomes.png
-outputs/reports/public_health_summary_report.html
-```
-
-Optional HTML export writes to:
-
-```text
-outputs/reports/
-```
-
-## Current Limitations
-
-- Age group is the only adjustment variable currently included in the sensitivity analysis.
-- Small subgroup counts may affect the stability of some logistic regression estimates.
-- The workflow is educational and exploratory rather than a full epidemiologic analysis plan.
-- The dataset itself is excluded from the repository, so users need a compatible local workbook to rerun the notebook.
-
-## Future Directions
-
-Possible extensions include:
-- multivariable regression with additional covariates
-- interaction analyses, such as sex-by-age-group comparisons
-- automated Quarto reports
-- more complete reusable plotting and statistics modules
-- adaptation to clinical or epidemiologic datasets with documented data dictionaries
-
-## Project Status
-
-Current status: active educational and portfolio project.
-
-Future plans:
-- regression modeling
-- Quarto reporting
-- expanded reusable modules
+- [Quarto report source](reports/public_health_summary_report.qmd)
+- [Main analysis notebook](notebooks/generate_public_health_summary_table.ipynb)
 
 ## Notes on Data
 
-Raw data are intentionally excluded from Git. Keep raw workbooks in `data/` locally and avoid committing identifiable, restricted, or non-public raw data.
+Keep the local workbook under `data/` and out of Git. The repository is structured so the analysis can be rerun locally without tracking the underlying raw data or generated outputs.

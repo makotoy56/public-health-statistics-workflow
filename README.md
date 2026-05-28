@@ -23,7 +23,9 @@ This project demonstrates a reproducible workflow for descriptive public-health 
 
 ## Workflow
 
-[![Workflow overview](docs/figures/workflow_diagram.svg)](docs/figures/workflow_diagram.svg)
+<p align="center">
+  <img src="docs/figures/workflow_diagram.svg" alt="Workflow overview" width="900">
+</p>
 
 ## Why This Project Matters
 

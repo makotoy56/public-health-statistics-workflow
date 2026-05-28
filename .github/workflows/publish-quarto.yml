@@ -36,19 +36,22 @@ jobs:
           pip install -r requirements.txt
 
       - name: Render Quarto report
-        run: quarto render reports/public_health_summary_report.qmd --output-dir _site
+        run: |
+          mkdir -p _site
+          quarto render reports/public_health_summary_report.qmd --output-dir ../_site
 
       - name: Inspect rendered site
-        run: find _site -maxdepth 5 -type f -name "*.html" -print
+        run: find . -maxdepth 5 -type f -name "*.html" -print
 
       - name: Prepare Pages root
         run: |
-          REPORT_HTML=$(find _site -type f -name "public_health_summary_report.html" | head -n 1)
+          REPORT_HTML=$(find . -path "*_site*" -type f -name "public_health_summary_report.html" | head -n 1)
           if [ -z "$REPORT_HTML" ]; then
             echo "Rendered report HTML not found"
-            find _site -maxdepth 5 -type f -print
+            find . -maxdepth 5 -type f -print
             exit 1
           fi
+          mkdir -p _site
           cp "$REPORT_HTML" _site/index.html
 
       - name: Upload Pages artifact

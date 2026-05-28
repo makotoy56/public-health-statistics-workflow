@@ -48,6 +48,7 @@ Raw data files are excluded from Git. Place the local raw workbook under `data/`
 - Preliminary `src/` modules prepared for future notebook refactoring
 - Preliminary Quarto report template for future reporting work
 - Separate age-adjusted sensitivity analysis using regression models
+- Age-adjusted forest plots for regression-based sensitivity analyses
 
 ## Folder Structure
 
@@ -86,7 +87,7 @@ The main summary table and exploratory figures present crude, unadjusted compari
 
 Descriptive statistics include means, standard deviations, medians, interquartile ranges, and percentages. Continuous variables are compared between groups using Mann-Whitney U tests because normality is not assumed. Categorical and binary cutoff indicators are compared using chi-square tests. Exploratory visualizations use simple matplotlib figures to show distributions, age-group percentages, and cutoff prevalence with approximate confidence intervals for proportions.
 
-Additional regression analyses adjust for age group as a sensitivity analysis. These analyses are reported separately from the crude summary table so the original descriptive workflow remains unchanged.
+Additional regression analyses adjust for age group as a sensitivity analysis. These analyses are reported separately from the crude summary table so the original descriptive workflow remains unchanged. Forest plots summarize the age-adjusted mean differences and odds ratios to make the adjusted sex effects easier to review.
 
 ### Age-Adjusted Sensitivity Analysis
 
@@ -164,6 +165,8 @@ outputs/figures/fig1_bmi_by_sex.png
 outputs/figures/fig2_blood_glucose_by_sex.png
 outputs/figures/fig3_age_group_percentages.png
 outputs/figures/fig4_cutoff_prevalence_by_sex.png
+outputs/figures/fig5_age_adjusted_mean_differences.png
+outputs/figures/fig6_age_adjusted_odds_ratios.png
 ```
 
 Optional HTML export writes to:

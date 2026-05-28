@@ -15,19 +15,19 @@ execute:
   eval: false
 ---
 
-# 1. Overview
+# Overview
 
 This Quarto report is the stakeholder-facing presentation layer for the project. The Jupyter notebook remains the main analysis workspace and continues to produce the summary table, forest plots, and exploratory figures. This report reuses those generated outputs to present the analysis in a cleaner, narrative format.
 
 The workflow is intentionally reproducible and local: generated outputs are written to `outputs/`, while raw data remain outside Git. The report summarizes crude comparisons, age-adjusted sensitivity analyses, and an exploratory sex-by-age interaction check without changing the underlying calculations.
 
-# 2. Analytic Objective
+# Analytic Objective
 
 The aim of this analysis is to describe how a small set of public-health measures differs between Male and Female participants, then check whether those differences persist after age-group adjustment. A secondary goal is to explore whether sex differences vary across age groups.
 
 This is an observational descriptive workflow. It is designed to summarize patterns, not to support causal claims.
 
-# 3. Methods
+# Methods
 
 ## 3.1 Sample and variables
 
@@ -53,7 +53,7 @@ These models are sensitivity analyses. They help assess whether the crude compar
 
 The sex-by-age interaction model evaluates whether Female vs Male differences appear to vary across age groups. This is an exploratory subgroup-heterogeneity check, not a primary inferential endpoint. Figure 7 provides the main visual summary of that pattern.
 
-# 4. Descriptive Summary
+# Descriptive Summary
 
 The summary table gives the baseline descriptive picture of the sample. In broad terms, the dataset is balanced enough by sex to support a direct comparison, and the age distribution is spread across the four age bands rather than concentrated in a single group.
 
@@ -61,7 +61,7 @@ The continuous measures show meaningful within-group variability, which is why t
 
 The key interpretive point is that the summary table is descriptive. It is designed to orient the reader before moving into the crude figures and the adjusted analyses that follow.
 
-# 5. Crude Visualizations
+# Crude Visualizations
 
 ![](../docs/figures/fig1_preview.png){fig-cap="Figure 1. BMI distribution by sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of BMI by sex."}
 
@@ -79,7 +79,7 @@ The age distribution provides the context for the later adjusted models. If age 
 
 This figure is the clearest crude summary of the threshold outcomes because it places all binary indicators on the same percentage scale. It complements the continuous boxplots by showing how the same measures behave when translated into public-health cutoffs. The error bars are approximate and should be read as uncertainty bands rather than as formal hypothesis tests.
 
-# 6. Age-Adjusted Sensitivity Analysis
+# Age-Adjusted Sensitivity Analysis
 
 The crude figures are informative, but they do not account for broad age-group differences. The next step is to adjust the sex comparisons for categorical age group only and check whether the main patterns persist.
 
@@ -93,7 +93,7 @@ Figure 5 shows adjusted mean differences for the continuous outcomes. It answers
 
 Figure 6 translates the same sex comparison into a prevalence-oriented form for the binary outcomes. Odds ratios are useful here because they align directly with the cutoff definitions and make it easier to see which public-health thresholds show persistence versus attenuation after age adjustment. As with Figure 5, uncertainty matters: confidence intervals describe how stable the adjusted contrast appears, not whether the effect is practically large.
 
-# 7. Exploratory Sex-by-Age Interaction Analysis
+# Exploratory Sex-by-Age Interaction Analysis
 
 The interaction model asks a narrower exploratory question: do the Female vs Male contrasts look similar across age groups, or do they vary by age stratum? This is useful for subgroup-heterogeneity assessment, but it should not be overinterpreted.
 
@@ -101,7 +101,7 @@ The interaction model asks a narrower exploratory question: do the Female vs Mal
 
 This figure is the main interaction visualization because it summarizes how the continuous outcomes behave across both sex and age groups in one place. Roughly parallel lines suggest little evidence of subgroup heterogeneity, while visibly diverging or crossing lines suggest possible effect modification. Because subgroup estimates can be unstable, this should be treated as a screening view rather than a definitive interaction result.
 
-# 8. Results
+# Results
 
 The overall picture is consistent with a descriptive public-health report: the crude table and figures describe the observed sex differences, the age-adjusted models show which contrasts remain after accounting for age-group composition, and the interaction figure checks whether the sex contrast appears consistent across age strata.
 
@@ -109,7 +109,7 @@ Taken together, the crude and adjusted results suggest that some differences are
 
 The age-adjusted forest plots are the clearest summary of the adjusted analysis. They provide a compact view of direction, magnitude, and uncertainty, and they make it easier to compare continuous and binary outcomes side by side. The interaction analysis is more tentative: its value is in highlighting potential heterogeneity, not in producing a standalone conclusion.
 
-# 9. Discussion
+# Discussion
 
 This analysis is best read as a descriptive public-health summary rather than a causal model. The crude comparisons are useful for orientation, but they can be influenced by age-group composition. The age-adjusted models address that specific limitation by estimating sex contrasts after controlling for categorical age group only.
 
@@ -117,14 +117,14 @@ The contrast between Figure 5 and Figure 6 is conceptually important. Figure 5 u
 
 The interaction analysis is exploratory and should be treated as a secondary check on subgroup heterogeneity. If the sex patterns look similar across age groups, that supports a simpler overall interpretation. If they vary by age, that is a useful signal for future work, but not a reason to overstate subgroup claims in this descriptive dataset.
 
-# 10. Limitations
+# Limitations
 
 - Age is the only adjustment variable currently included in the sensitivity analysis.
 - Small subgroup counts can make some regression estimates unstable, especially in logistic models.
 - The workflow is educational and exploratory rather than a full analytic plan for causal inference.
 - The analysis depends on the local data file and the assignment-specific cutoff definitions used to derive binary indicators.
 
-# 11. Future Directions
+# Future Directions
 
 - Multivariable regression with additional covariates.
 - Interaction analyses with more formal subgroup comparisons.

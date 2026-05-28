@@ -29,27 +29,27 @@ This is an observational descriptive workflow. It is designed to summarize patte
 
 # Methods
 
-## 3.1 Sample and variables
+## Sample and variables
 
 The analytic dataset contains 845 participants, with 437 Male and 408 Female participants. Age is grouped into four broad categories spanning the 40s through the 70s. The analysis covers continuous cardiometabolic measures, dietary variables, urinary sodium excretion, and binary cutoff indicators derived from assignment-specific thresholds.
 
-## 3.2 Crude descriptive analysis
+## Crude descriptive analysis
 
 The main summary table reports descriptive statistics by sex and overall. Continuous variables are summarized with means, standard deviations, medians, and interquartile ranges. Binary and categorical variables are summarized with percentages. Mann-Whitney U tests are used for crude continuous comparisons, and chi-square tests are used for crude categorical and binary comparisons.
 
 These crude results are unadjusted. They are useful for describing the data, but they do not account for age-group composition.
 
-## 3.3 Exploratory visualizations
+## Exploratory visualizations
 
 The crude visualizations use simple matplotlib figures to show distributions by sex, age-group composition, and cutoff prevalence. The goal is to make patterns easier to see without adding unnecessary graphical complexity.
 
-## 3.4 Age-adjusted sensitivity analysis
+## Age-adjusted sensitivity analysis
 
 The age-adjusted models estimate Female vs Male contrasts after adjusting for categorical age group only. Continuous outcomes are modeled with linear regression, and binary cutoff outcomes are modeled with logistic regression. The resulting forest plots show adjusted mean differences for continuous outcomes and adjusted odds ratios for binary outcomes.
 
 These models are sensitivity analyses. They help assess whether the crude comparisons are materially changed by broad age structure, but they do not make the analysis causal.
 
-## 3.5 Exploratory interaction analysis
+## Exploratory interaction analysis
 
 The sex-by-age interaction model evaluates whether Female vs Male differences appear to vary across age groups. This is an exploratory subgroup-heterogeneity check, not a primary inferential endpoint. Figure 7 provides the main visual summary of that pattern.
 
@@ -83,7 +83,7 @@ This figure is the clearest crude summary of the threshold outcomes because it p
 
 The crude figures are informative, but they do not account for broad age-group differences. The next step is to adjust the sex comparisons for categorical age group only and check whether the main patterns persist.
 
-## 6.1 Forest Plots
+## Forest Plots
 
 ![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-adjusted mean differences for continuous outcomes. Estimates come from linear regression models adjusted for categorical age group only." fig-alt="Forest plot of age-adjusted mean differences."}
 

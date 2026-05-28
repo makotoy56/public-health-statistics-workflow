@@ -21,3 +21,6 @@ data/
 # Generated outputs and reports
 outputs/
 *.html
+reports/.gitignore
+reports/*_files/
+reports/outputs/

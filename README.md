@@ -7,12 +7,15 @@
 - [Key Features](#key-features)
 - [Folder Structure](#folder-structure)
 - [Technologies Used](#technologies-used)
+- [Statistical Methods](#statistical-methods)
 - [Reproducibility](#reproducibility)
 - [Set Up a Virtual Environment](#set-up-a-virtual-environment)
 - [Install Requirements](#install-requirements)
 - [Run the Notebook](#run-the-notebook)
 - [HTML Export](#html-export)
 - [Outputs Generated](#outputs-generated)
+- [Current Limitations](#current-limitations)
+- [Future Directions](#future-directions)
 - [Project Status](#project-status)
 - [Notes on Data](#notes-on-data)
 
@@ -44,6 +47,7 @@ Raw data files are excluded from Git. Place the local raw workbook under `data/`
 - Styled Excel export for reporting
 - Preliminary `src/` modules prepared for future notebook refactoring
 - Preliminary Quarto report template for future reporting work
+- Separate age-adjusted sensitivity analysis using regression models
 
 ## Folder Structure
 
@@ -75,6 +79,20 @@ public-health-statistics-workflow/
 - openpyxl
 - Jupyter Notebook
 - Quarto
+
+## Statistical Methods
+
+The main summary table and exploratory figures present crude, unadjusted comparisons between Male and Female groups. These descriptive results are intended to summarize the dataset and identify patterns for review, not to estimate causal effects.
+
+Descriptive statistics include means, standard deviations, medians, interquartile ranges, and percentages. Continuous variables are compared between groups using Mann-Whitney U tests because normality is not assumed. Categorical and binary cutoff indicators are compared using chi-square tests. Exploratory visualizations use simple matplotlib figures to show distributions, age-group percentages, and cutoff prevalence with approximate confidence intervals for proportions.
+
+Additional regression analyses adjust for age group as a sensitivity analysis. These analyses are reported separately from the crude summary table so the original descriptive workflow remains unchanged.
+
+### Age-Adjusted Sensitivity Analysis
+
+Continuous outcomes are analyzed using linear regression models with sex and categorical age group as predictors. Binary cutoff outcomes are analyzed using logistic regression models with the same adjustment structure. The age-adjusted results report the Female vs Male coefficient for continuous outcomes and the Female vs Male odds ratio for binary outcomes, with 95% confidence intervals, p-values, and model sample sizes.
+
+These models adjust only for categorical age group. They should be interpreted as sensitivity analyses within an observational descriptive workflow, not as causal models.
 
 ## Reproducibility
 
@@ -153,6 +171,22 @@ Optional HTML export writes to:
 ```text
 outputs/reports/
 ```
+
+## Current Limitations
+
+- Age group is the only adjustment variable currently included in the sensitivity analysis.
+- Small subgroup counts may affect the stability of some logistic regression estimates.
+- The workflow is educational and exploratory rather than a full epidemiologic analysis plan.
+- The dataset itself is excluded from the repository, so users need a compatible local workbook to rerun the notebook.
+
+## Future Directions
+
+Possible extensions include:
+- multivariable regression with additional covariates
+- interaction analyses, such as sex-by-age-group comparisons
+- automated Quarto reports
+- more complete reusable plotting and statistics modules
+- adaptation to clinical or epidemiologic datasets with documented data dictionaries
 
 ## Project Status
 

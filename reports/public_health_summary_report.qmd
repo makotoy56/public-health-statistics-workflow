@@ -63,23 +63,23 @@ The key interpretive point is that the summary table is descriptive. It is desig
 
 # Crude Visualizations
 
-**Figure 1. BMI by Sex**
+**Figure 1. Age-Group Distribution by Sex**
 
-![](../docs/figures/fig1_preview.png){fig-cap="Figure 1. BMI by Sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of BMI by sex."}
+![](../docs/figures/fig3_preview.png){fig-cap="Figure 1. Age-Group Distribution by Sex. Bars show age-group percentages calculated separately within Male and Female participants." fig-alt="Grouped bar chart of age-group distribution by sex."}
+
+Figure 1 shows the age composition separately for Male and Female participants. It provides context for the later age-adjusted sensitivity analysis because crude sex comparisons may partly reflect age-group composition if the two groups have different age distributions.
+
+**Figure 2. BMI by Sex**
+
+![](../docs/figures/fig1_preview.png){fig-cap="Figure 2. BMI by Sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of BMI by sex."}
 
 BMI distributions overlap substantially, which suggests that the crude sex contrast is modest relative to the within-group spread. The p-value in the notebook is only a reference for the unadjusted comparison; the figure itself is more informative about magnitude and overlap than about practical importance.
 
-**Figure 2. Blood Glucose by Sex**
+**Figure 3. Blood Glucose by Sex**
 
-![](../docs/figures/fig2_preview.png){fig-cap="Figure 2. Blood Glucose by Sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of blood glucose by sex."}
+![](../docs/figures/fig2_preview.png){fig-cap="Figure 3. Blood Glucose by Sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of blood glucose by sex."}
 
 Blood glucose also shows overlap between groups, with the boxplots emphasizing the spread and central tendency rather than a single significance threshold. This is a descriptive comparison, so the more useful question is whether the distributions are meaningfully separated rather than whether a p-value crosses an arbitrary cutoff.
-
-**Figure 3. Age-Group Distribution by Sex**
-
-![](../docs/figures/fig3_preview.png){fig-cap="Figure 3. Age-Group Distribution by Sex. Bars show age-group percentages calculated separately within Male and Female participants." fig-alt="Grouped bar chart of age-group distribution by sex."}
-
-This figure shows the age composition separately for Male and Female participants. It provides context for the later age-adjusted sensitivity analysis because crude sex comparisons may partly reflect age-group composition if the two groups have different age distributions.
 
 **Figure 4. Prevalence Above Cutoff Values by Sex**
 

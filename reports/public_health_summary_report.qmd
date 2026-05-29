@@ -93,11 +93,11 @@ The crude figures are informative, but they do not account for broad age-group d
 
 ## Forest Plots
 
-**Figure 5. Age-Adjusted Standardized Mean Differences**
+**Figure 5. Age-Adjusted Standardized Female vs Male Mean Differences**
 
-![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-Adjusted Standardized Mean Differences. Estimates come from linear regression models adjusted for categorical age group only and are shown in standard-deviation units." fig-alt="Forest plot of age-adjusted standardized mean differences."}
+![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-Adjusted Standardized Female vs Male Mean Differences. Estimates come from linear regression models adjusted for categorical age group only, shown in standard-deviation units, and sorted by absolute effect size." fig-alt="Forest plot of age-adjusted standardized Female vs Male mean differences."}
 
-Figure 5 shows standardized adjusted mean differences for the continuous outcomes. The outcomes are standardized because their original units and ranges differ, so the estimates are interpreted in standard-deviation units. This makes the cross-outcome visual comparison more meaningful than plotting BMI, blood pressure, glucose, and urinary sodium on one raw-unit axis. Confidence intervals and p-values describe model-based uncertainty, but p-values should not be read as practical importance by themselves.
+Figure 5 shows standardized adjusted mean differences for the continuous outcomes, sorted by the absolute size of the adjusted Female vs Male contrast. The outcomes are standardized before modeling because their original units and ranges differ, so the estimates are interpreted in standard-deviation units. This makes the cross-outcome visual comparison more meaningful than plotting BMI, blood pressure, glucose, and urinary sodium on one raw-unit axis. Confidence intervals and p-values describe model-based uncertainty, but p-values should not be read as practical importance by themselves.
 
 **Figure 6. Age-Adjusted Odds Ratios**
 

@@ -45,7 +45,7 @@ The crude visualizations use simple matplotlib figures to show distributions by 
 
 ## Age-adjusted sensitivity analysis
 
-The age-adjusted models estimate Female vs Male contrasts after adjusting for categorical age group only. Continuous outcomes are modeled with linear regression, and binary cutoff outcomes are modeled with logistic regression. The resulting forest plots show adjusted mean differences for continuous outcomes and adjusted odds ratios for binary outcomes.
+The age-adjusted models estimate Female vs Male contrasts after adjusting for categorical age group only. Continuous outcomes are modeled with linear regression, and binary cutoff outcomes are modeled with logistic regression. The resulting forest plots show standardized adjusted mean differences for continuous outcomes and adjusted odds ratios for binary outcomes.
 
 These models are sensitivity analyses. They help assess whether the crude comparisons are materially changed by broad age structure, but they do not make the analysis causal.
 
@@ -85,9 +85,9 @@ The crude figures are informative, but they do not account for broad age-group d
 
 ## Forest Plots
 
-![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-adjusted mean differences for continuous outcomes. Estimates come from linear regression models adjusted for categorical age group only." fig-alt="Forest plot of age-adjusted mean differences."}
+![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-adjusted standardized mean differences for continuous outcomes. Estimates come from linear regression models adjusted for categorical age group only and are shown in standard-deviation units." fig-alt="Forest plot of age-adjusted standardized mean differences."}
 
-Figure 5 shows adjusted mean differences for the continuous outcomes. It answers a different question from the crude boxplots: not whether the raw distributions differ, but whether the Female vs Male contrast remains after allowing for age-group structure. Estimates close to zero indicate attenuation of the crude difference, while wider intervals indicate more uncertainty around the adjusted contrast.
+Figure 5 shows standardized adjusted mean differences for the continuous outcomes. The outcomes are standardized because their original units and ranges differ, so the estimates are interpreted in standard-deviation units. This makes the cross-outcome visual comparison more meaningful than plotting BMI, blood pressure, glucose, and urinary sodium on one raw-unit axis. Confidence intervals and p-values describe model-based uncertainty, but p-values should not be read as practical importance by themselves.
 
 ![](../docs/figures/fig6_preview.png){fig-cap="Figure 6. Age-adjusted odds ratios for binary cutoff outcomes. Estimates come from logistic regression models adjusted for categorical age group only." fig-alt="Forest plot of age-adjusted odds ratios."}
 

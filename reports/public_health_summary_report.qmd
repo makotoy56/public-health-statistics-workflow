@@ -75,11 +75,11 @@ BMI distributions overlap substantially, which suggests that the crude sex contr
 
 Blood glucose also shows overlap between groups, with the boxplots emphasizing the spread and central tendency rather than a single significance threshold. This is a descriptive comparison, so the more useful question is whether the distributions are meaningfully separated rather than whether a p-value crosses an arbitrary cutoff.
 
-**Figure 3. Age-Group Percentages**
+**Figure 3. Age-Group Distribution by Sex**
 
-![](../docs/figures/fig3_preview.png){fig-cap="Figure 3. Age-Group Percentages. This figure shows the composition of the analytic sample rather than a sex comparison." fig-alt="Bar chart of age-group percentages."}
+![](../docs/figures/fig3_preview.png){fig-cap="Figure 3. Age-Group Distribution by Sex. Bars show age-group percentages calculated separately within Male and Female participants." fig-alt="Grouped bar chart of age-group distribution by sex."}
 
-The age distribution provides the context for the later adjusted models. If age groups are unevenly represented, crude sex comparisons can partly reflect sample composition rather than a direct difference in the measured outcomes.
+This figure shows the age composition separately for Male and Female participants. It provides context for the later age-adjusted sensitivity analysis because crude sex comparisons may partly reflect age-group composition if the two groups have different age distributions.
 
 **Figure 4. Prevalence Above Cutoff Values by Sex**
 

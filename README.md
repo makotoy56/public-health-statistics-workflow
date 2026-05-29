@@ -40,6 +40,22 @@ This project demonstrates a reproducible workflow for descriptive public-health 
 - Exploratory sex-by-age interaction analysis was used as a subgroup-pattern check, not as confirmatory evidence.
 - Findings are descriptive and should not be interpreted causally.
 
+## Skills Demonstrated
+
+- Python
+- Pandas
+- Statistical analysis
+- Linear regression
+- Logistic regression
+- Epidemiology
+- Biostatistics
+- Data visualization
+- Jupyter Notebook
+- Quarto
+- GitHub Actions
+- GitHub Pages
+- Reproducible research
+
 ## Workflow
 
 <img src="docs/figures/workflow_diagram.svg" alt="Workflow overview" width="900">
@@ -107,6 +123,14 @@ The Quarto report includes the age-adjusted forest plots for the continuous and 
 GitHub Pages must be enabled from repository Settings > Pages > Build and deployment > GitHub Actions.
 
 ## Project Structure
+
+The repository is organized so reviewers can quickly separate the portfolio summary, analysis workspace, report source, and deployed presentation.
+
+- `README.md` summarizes the project, skills, analytic takeaways, and curated visual previews.
+- `notebooks/` contains the main reproducible analysis notebook.
+- `reports/` contains the Quarto report source used for the full HTML presentation.
+- `docs/` stores tracked portfolio assets, including README preview figures.
+- GitHub Pages deployment publishes the rendered Quarto report through the GitHub Actions workflow.
 
 ```text
 .

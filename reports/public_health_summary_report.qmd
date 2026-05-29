@@ -63,19 +63,27 @@ The key interpretive point is that the summary table is descriptive. It is desig
 
 # Crude Visualizations
 
-![](../docs/figures/fig1_preview.png){fig-cap="Figure 1. BMI distribution by sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of BMI by sex."}
+**Figure 1. BMI by Sex**
+
+![](../docs/figures/fig1_preview.png){fig-cap="Figure 1. BMI by Sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of BMI by sex."}
 
 BMI distributions overlap substantially, which suggests that the crude sex contrast is modest relative to the within-group spread. The p-value in the notebook is only a reference for the unadjusted comparison; the figure itself is more informative about magnitude and overlap than about practical importance.
 
-![](../docs/figures/fig2_preview.png){fig-cap="Figure 2. Blood glucose distribution by sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of blood glucose by sex."}
+**Figure 2. Blood Glucose by Sex**
+
+![](../docs/figures/fig2_preview.png){fig-cap="Figure 2. Blood Glucose by Sex. Crude boxplots compare the unadjusted distributions for Male and Female participants." fig-alt="Boxplot of blood glucose by sex."}
 
 Blood glucose also shows overlap between groups, with the boxplots emphasizing the spread and central tendency rather than a single significance threshold. This is a descriptive comparison, so the more useful question is whether the distributions are meaningfully separated rather than whether a p-value crosses an arbitrary cutoff.
 
-![](../docs/figures/fig3_preview.png){fig-cap="Figure 3. Age-group percentages. This figure shows the composition of the analytic sample rather than a sex comparison." fig-alt="Bar chart of age-group percentages."}
+**Figure 3. Age-Group Percentages**
+
+![](../docs/figures/fig3_preview.png){fig-cap="Figure 3. Age-Group Percentages. This figure shows the composition of the analytic sample rather than a sex comparison." fig-alt="Bar chart of age-group percentages."}
 
 The age distribution provides the context for the later adjusted models. If age groups are unevenly represented, crude sex comparisons can partly reflect sample composition rather than a direct difference in the measured outcomes.
 
-![](../docs/figures/fig4_preview.png){fig-cap="Figure 4. Prevalence above cutoff values by sex. Bars show crude Male and Female prevalences with approximate 95% confidence intervals." fig-alt="Horizontal grouped bar chart of cutoff prevalence by sex."}
+**Figure 4. Prevalence Above Cutoff Values by Sex**
+
+![](../docs/figures/fig4_preview.png){fig-cap="Figure 4. Prevalence Above Cutoff Values by Sex. Bars show crude Male and Female prevalences with approximate 95% confidence intervals." fig-alt="Horizontal grouped bar chart of cutoff prevalence by sex."}
 
 This figure is the clearest crude summary of the threshold outcomes because it places all binary indicators on the same percentage scale. It complements the continuous boxplots by showing how the same measures behave when translated into public-health cutoffs. The error bars are approximate and should be read as uncertainty bands rather than as formal hypothesis tests.
 
@@ -85,11 +93,15 @@ The crude figures are informative, but they do not account for broad age-group d
 
 ## Forest Plots
 
-![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-adjusted standardized mean differences for continuous outcomes. Estimates come from linear regression models adjusted for categorical age group only and are shown in standard-deviation units." fig-alt="Forest plot of age-adjusted standardized mean differences."}
+**Figure 5. Age-Adjusted Standardized Mean Differences**
+
+![](../docs/figures/fig5_preview.png){fig-cap="Figure 5. Age-Adjusted Standardized Mean Differences. Estimates come from linear regression models adjusted for categorical age group only and are shown in standard-deviation units." fig-alt="Forest plot of age-adjusted standardized mean differences."}
 
 Figure 5 shows standardized adjusted mean differences for the continuous outcomes. The outcomes are standardized because their original units and ranges differ, so the estimates are interpreted in standard-deviation units. This makes the cross-outcome visual comparison more meaningful than plotting BMI, blood pressure, glucose, and urinary sodium on one raw-unit axis. Confidence intervals and p-values describe model-based uncertainty, but p-values should not be read as practical importance by themselves.
 
-![](../docs/figures/fig6_preview.png){fig-cap="Figure 6. Age-adjusted odds ratios for binary cutoff outcomes. Estimates come from logistic regression models adjusted for categorical age group only." fig-alt="Forest plot of age-adjusted odds ratios."}
+**Figure 6. Age-Adjusted Odds Ratios**
+
+![](../docs/figures/fig6_preview.png){fig-cap="Figure 6. Age-Adjusted Odds Ratios. Estimates come from logistic regression models adjusted for categorical age group only." fig-alt="Forest plot of age-adjusted odds ratios."}
 
 Figure 6 translates the same sex comparison into a prevalence-oriented form for the binary outcomes. Odds ratios are useful here because they align directly with the cutoff definitions and make it easier to see which public-health thresholds show persistence versus attenuation after age adjustment. As with Figure 5, uncertainty matters: confidence intervals describe how stable the adjusted contrast appears, not whether the effect is practically large.
 
@@ -97,7 +109,9 @@ Figure 6 translates the same sex comparison into a prevalence-oriented form for 
 
 The interaction model asks a narrower exploratory question: do the Female vs Male contrasts look similar across age groups, or do they vary by age stratum? This is useful for subgroup-heterogeneity assessment, but it should not be overinterpreted.
 
-![](../docs/figures/fig7_preview.png){fig-cap="Figure 7. Sex-by-age patterns for continuous outcomes. This exploratory figure shows whether mean levels appear to vary differently by sex across age groups." fig-alt="Interaction line plots for continuous outcomes."}
+**Figure 7. Exploratory Sex-by-Age Interaction**
+
+![](../docs/figures/fig7_preview.png){fig-cap="Figure 7. Exploratory Sex-by-Age Interaction. This exploratory figure shows whether mean levels appear to vary differently by sex across age groups." fig-alt="Interaction line plots for continuous outcomes."}
 
 This figure is the main interaction visualization because it summarizes how the continuous outcomes behave across both sex and age groups in one place. Roughly parallel lines suggest little evidence of subgroup heterogeneity, while visibly diverging or crossing lines suggest possible effect modification. Because subgroup estimates can be unstable, this should be treated as a screening view rather than a definitive interaction result.
 

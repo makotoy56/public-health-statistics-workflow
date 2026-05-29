@@ -30,6 +30,16 @@ This project demonstrates a reproducible workflow for descriptive public-health 
 - binary public-health cutoff indicators
 - local workbook excluded from Git
 
+## Executive Summary
+
+- The analytic sample included 845 participants, with 437 Male and 408 Female participants.
+- Age-group composition is shown by sex to provide context for later age-adjusted analyses.
+- Crude comparisons showed sex-associated differences across selected cardiometabolic, dietary, and urinary sodium indicators.
+- Age-adjusted models provided a sensitivity analysis by accounting for categorical age group.
+- Standardized forest plots make continuous outcomes comparable across different measurement scales.
+- Exploratory sex-by-age interaction analysis was used as a subgroup-pattern check, not as confirmatory evidence.
+- Findings are descriptive and should not be interpreted causally.
+
 ## Workflow
 
 <img src="docs/figures/workflow_diagram.svg" alt="Workflow overview" width="900">
@@ -39,14 +49,6 @@ This project demonstrates a reproducible workflow for descriptive public-health 
 Public-health analyses are often first explored in spreadsheets, but the workflow becomes more defensible when the data preparation, statistical testing, modeling, and reporting are all reproducible. This project shows that transition in a compact form: the notebook documents the analytical steps, the Quarto report packages the results for presentation, and Git keeps the code and report source under version control.
 
 The focus is interpretability rather than prediction. The comparisons are framed as descriptive observations and sensitivity analyses, with uncertainty shown explicitly through confidence intervals and forest plots.
-
-## Key Findings
-
-- crude comparisons showed sex-associated differences across selected cardiometabolic, dietary, and urinary sodium indicators
-- age-adjusted analyses provided a second perspective by accounting for categorical age group
-- forest plots summarized uncertainty and effect direction
-- exploratory interaction analysis checked whether sex-associated patterns varied across age strata
-- findings are descriptive and not causal
 
 ## Representative Results
 
